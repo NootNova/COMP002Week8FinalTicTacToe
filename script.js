@@ -52,7 +52,13 @@ function startGame() {
 
 };
 
-function cellClicked() {
+function switchPlayer() {
+
+    if(currentPlayer = 'X') {
+
+        currentPlayer = 'O';
+
+    } else (currentPlayer = 'O') => {currentPlayer = 'X'};
 
 };
 
@@ -69,6 +75,8 @@ function updateCell() {
     console.log(currentPlayer);
 
     cellIndex.textContent = currentPlayer;
+
+    switchPlayer();
 
 };
 
