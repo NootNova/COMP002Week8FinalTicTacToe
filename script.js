@@ -1,7 +1,11 @@
 
 const cells = document.querySelectorAll(".game-square");
 
+cells.forEach(cells => cells.addEventListener("click", updateCell));
+
 const playAgain = document.querySelector("#button-play-again");
+
+playAgain.addEventListener("click", restartGame);
 
 const xScore = document.querySelector("#scoreboard-x");
 
@@ -37,8 +41,24 @@ let currentPlayer = "X";
 
 let running = false;
 
-function startGame(){
+startGame();
+
+function startGame() {
 
     running = true;
+
+};
+
+function updateCell() {
+
+    console.log("cell was clicked!");
+
+};
+
+function restartGame() {
+
+    console.log("Button was clicked!");
+
+    startGame();
 
 };
