@@ -1,20 +1,25 @@
 
+
 const cells = document.querySelectorAll(".game-square");
 
-cells.forEach(cell => cell.addEventListener("click", updateCell));
+    cells.forEach(cell => cell.addEventListener("click", updateCell));
 
-const fieldArray = ["", "", "", "", "", "", "", "", ""]
+
+document.addEventListener("DOMContentLoaded", startGame());
 
 
 const playAgain = document.querySelector("#button-play-again");
 
-playAgain.addEventListener("click", restartGame);
+    playAgain.addEventListener("click", restartGame);
+
 
 const turnTextArea = document.querySelector('#turn')
+
 
 const xScore = document.querySelector("#scoreboard-x");
 
 const oScore = document.querySelector("#scoreboard-o");
+
 
 const winCondtions = [
 
@@ -42,11 +47,11 @@ const winCondtions = [
 
 ];
 
+const fieldArray = ["", "", "", "", "", "", "", "", ""]
+
 let currentPlayer = "X";
 
-let running = false;
-
-startGame();
+turnTextArea.textContent = `${currentPlayer}'s turn`
 
 function startGame() {
 
@@ -76,9 +81,17 @@ function updateCell() {
 
     const cellIndex = this;
 
+    if(running == true & cellIndex.textContent == "") {
+
     cellIndex.textContent = currentPlayer;
 
     switchPlayer();
+
+    } else {
+
+        return;
+
+    };
 
 };
 
