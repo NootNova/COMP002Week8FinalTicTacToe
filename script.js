@@ -10,6 +10,8 @@ const playAgain = document.querySelector("#button-play-again");
 
 playAgain.addEventListener("click", restartGame);
 
+const turnTextArea = document.querySelector('#turn')
+
 const xScore = document.querySelector("#scoreboard-x");
 
 const oScore = document.querySelector("#scoreboard-o");
@@ -54,13 +56,17 @@ function startGame() {
 
 function switchPlayer() {
 
-    if(currentPlayer =='X') {
+    if(currentPlayer == 'X') {
 
-       return currentPlayer = 'O';
+        currentPlayer = 'O';
+
+        return turnTextArea.textContent = `${currentPlayer}'s turn`;
 
     }else if (currentPlayer == 'O') {
         
-        return currentPlayer = 'X';
+        currentPlayer = 'X';
+
+        return turnTextArea.textContent = `${currentPlayer}'s turn`;
 
     };
 
@@ -69,14 +75,6 @@ function switchPlayer() {
 function updateCell() {
 
     const cellIndex = this;
-
-    console.log("Cell was clicked!");
-
-    console.log(cellIndex);
-
-    console.log(fieldArray);
-
-    console.log(currentPlayer);
 
     cellIndex.textContent = currentPlayer;
 
