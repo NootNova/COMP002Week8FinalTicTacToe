@@ -7,4 +7,4 @@ Purpose: Tic Tac Toe for the week 8 final.
 
 3. 11/27 3:30pm: messed with setting event listeners for each of the cells and their class/ids. used 'this' to refer to which cell has been clicked to update that ones text content with the current player, need to work on switching current player.
 
-4.
+4. 5:06pm: set up an if/else/if for switching the player and adding text to display the current player, added an if/else for only letting cells be updated if the game is running and the cell is empty. Next up is checking all array values in the win conditions for equality to find a winner and stop the game, followed by adding the score to the local storage!
