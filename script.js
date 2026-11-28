@@ -54,11 +54,15 @@ function startGame() {
 
 function switchPlayer() {
 
-    if(currentPlayer = 'X') {
+    if(currentPlayer =='X') {
 
-        currentPlayer = 'O';
+       return currentPlayer = 'O';
 
-    } else (currentPlayer = 'O') => {currentPlayer = 'X'};
+    }else if (currentPlayer == 'O') {
+        
+        return currentPlayer = 'X';
+
+    };
 
 };
 
